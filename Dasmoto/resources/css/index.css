@@ -1,0 +1,51 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    /* margin: 10px; */
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    /* margin: 80px 0; */
+    font-size: 100px;
+    font-weight: bold;
+    color: khaki;
+    text-align: center;
+    background-image: url('../img/pattern.webp');
+}
+
+h2 {
+    /* margin-bottom: 20px; */
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+h2.first {
+    background-color: mediumspringgreen;
+}
+
+h2.second {
+    background-color: lightcoral;
+}
+
+h2.third {
+    background-color: skyblue;
+}
+
+/* h3 {
+    margin: 20px 0;
+} */
+
+p {
+    margin-bottom: 20px;
+}
+
+.price-highlighted {
+    font-weight: bold;
+    color: blue;
+}
