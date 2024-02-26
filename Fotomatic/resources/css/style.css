@@ -1,0 +1,619 @@
+/* Universal Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.main-content {
+  position: relative;
+  top: 5.3125rem; /* To offset for fixed header. */
+}
+
+.center {
+  text-align: center;
+}
+
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  display: block;
+}
+
+@media only screen and (max-width: 760px) {
+  .main-content {
+    top: 2.5625rem;
+    position: relative;
+  }
+}
+
+/* Header */
+
+header {
+  position: fixed;
+  width: 100%;
+  border-bottom: solid 1px #c6c1c1;
+  background-color: white;
+  z-index: 10;
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  padding: 0 1.875rem;
+  height: 85px;
+}
+
+header .logo {
+  flex: 1;
+  font-size: 1.5rem;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  color: #4a4a4a;
+}
+
+header nav ul {
+  display: flex;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  padding-left: 3.5rem;
+}
+
+nav a {
+  vertical-align: bottom;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #4a4a4a;
+}
+
+nav a.button {
+  color: #fff;
+}
+
+header .icon {
+  margin-left: .75rem;
+  width: 1rem;
+  vertical-align: middle;
+  transform: scale(1.25);
+}
+
+header .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 890px) {
+  nav li {
+    padding-left: 1.75rem;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header .content {
+    height: 85px;
+  }
+
+  header .mobile {
+    display: block;
+    width: auto;
+  }
+
+  header .mobile li:nth-child(-n+3) {
+    display: none;
+  }
+
+  header .mobile li:last-of-type {
+    margin-left: 1.75rem;
+    display: block;
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  nav li {
+    padding-left: 0;
+  }
+
+  nav a {
+    line-height: 0;
+  }
+
+  nav a.button {
+    line-height: 1.6;
+  }
+
+  header .desktop {
+    display: none;
+  }
+
+  header .content {
+    height: 48px;
+  }
+
+  header .mobile {
+    width: 100%;
+  }
+
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header .mobile li:nth-child(-n+3) {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  header .mobile li img {
+    transform: scale(1.25);
+  }
+}
+
+/* Sign Up Section */
+
+#sign-up-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 43.5rem;
+  background-image: url(../images/banner-landingpage.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#sign-up-cta {
+  margin: 10.625rem 6.25rem;
+  padding: 2rem 5rem 3.5rem 5rem;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  background-color: #9dc20b;
+}
+
+#sign-up-cta .content {
+  width: 25.625rem;
+  margin-top: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: white;
+}
+
+#sign-up-cta .header {
+  margin-bottom: 0.75rem;
+}
+
+#sign-up-cta h1 {
+  font-size: 3.125rem;
+}
+
+#sign-up-cta h2 {
+  font-size: 2.25rem;
+}
+
+#sign-up-cta span {
+  color: #fff;
+  font-size: 1.25rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+#sign-up-cta span strong {
+  font-weight: bold;
+}
+
+#sign-up-cta .cursive {
+  font-family: "Damion", cursive;
+}
+
+#sign-up-cta .striking {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  font-size: 3.125rem;
+  line-height: 1.4;
+}
+
+#sign-up-cta .button {
+  margin-top: 1.625rem;
+  padding: 1.125rem 5rem;
+  font-size: 1.25rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+@media only screen and (max-width: 890px) {
+  #sign-up-section {
+    align-items: center;
+    justify-content: center;
+    height: 28rem;
+  }
+
+  #sign-up-cta {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+  }
+
+  #sign-up-cta .content {
+    margin-top: 0;
+  }
+
+  #sign-up-cta .email {
+    display: none;
+  }
+
+  #sign-up-cta .striking {
+    font-size: 3.125rem;
+  }
+
+  #sign-up-cta .cursive {
+    font-size: 2.25rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #sign-up-section {
+    height: 24rem;
+    background-position: right;
+  }
+
+  #sign-up-cta .cursive {
+    font-size: 2.5rem;
+  }
+
+  #sign-up-cta .striking {
+    font-size: 2.25rem;
+  }
+}
+
+/* Features Section */
+
+#features-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 5% 2.875rem;
+  background-color: #f3f3f3;
+  gap: 2.375rem;
+}
+
+.feature {
+  background-color: white;
+  padding: 2rem 0;
+}
+
+.feature .image-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2.5rem;
+}
+
+.feature .image-container img {
+  width: 90%;
+}
+
+.feature .content {
+  padding: 0 4rem 1rem;
+}
+
+.feature h2 {
+  padding-bottom: .5rem;
+  font-size: 2.25rem;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  color: #4a4a4a;
+  line-height: 1.2;
+}
+
+.feature h3 {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #4a4a4a;
+}
+
+@media only screen and (max-width: 890px) {
+  #features-section {
+    padding: 2rem 5% 1.4375rem;
+  }
+
+  .feature .content {
+    padding: 0 1rem;
+  }
+
+  .feature .image-container {
+    padding-bottom: 1rem;
+  }
+
+  .feature h2 {
+    font-size: 1.75rem;
+    line-height: 1.4;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .feature h3 {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #features-section {
+    flex-direction: row;
+    padding: 2rem 5% 1.4375rem;
+  }
+
+  .feature {
+    margin: 0;
+    padding: 1.25rem 1rem 2rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #features-section {
+    flex-direction: column;
+    background-color: white;
+    gap: 0.75rem;
+    padding: 0;
+  }
+
+  #features-section .feature {
+    padding: 1rem 1rem 1.875rem;
+  }
+
+  #features-section .feature .image-container {
+    height: 16rem;
+  }
+
+  #features-section .feature .image-container img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .feature h2 {
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .feature h3 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .feature:first-of-type {
+    background-color: #f3f3f3;
+  }
+}
+
+/* Filters Section */
+
+#filters-section {
+  padding: 4rem 0;
+  background-color: #4a4a4a;
+}
+
+#filters-section .content {
+  padding: 0 .625rem;
+  margin-bottom: 5rem;
+}
+
+#filters-section .content h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+#filters-section .content h3 {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  color: white;
+}
+
+#filters-section .images-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0 1%;
+}
+
+#filters-section .images-container img {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 890px) {
+  #filters-section {
+    padding: 4rem 0 0;
+  }
+  
+  #filters-section .content {
+    margin-bottom: 3.5rem;
+  }
+
+  #filters-section .content h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+
+  #filters-section .images-container {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #filters-section {
+    padding: 1.5rem 0 0 0;
+  }
+
+  #filters-section .content {
+    margin-bottom: 1rem;
+  }
+
+  #filters-section .content h2 {
+    padding-bottom: .625rem;
+    font-size: 1.125rem;
+    line-height: 1.3;
+    font-weight: normal;
+  }
+
+  #filters-section .content h3 {
+    font-size: .875rem;
+    line-height: 1.4;
+  }
+
+  #filters-section .images-container {
+    padding: 0;
+  }
+
+  #filters-section .extra {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #filters-section {
+    padding: 2rem 0 0 0;
+  }
+
+  #filters-section .content {
+    margin-bottom: 2rem;
+    padding: 0 2.25rem;
+  }
+
+  #filters-section .content h2 {
+    font-size: 1.5rem;
+    color: #979797;
+  }
+
+  #filters-section .content h3 {
+    font-size: 1.125rem;
+    color: #979797;
+  }
+}
+
+/* Quotes Section */
+
+#quotes-section {
+  background-color: #f3f3f3;
+}
+
+#quotes-section .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+  padding: 5rem 0;
+}
+
+#quotes-section .quote {
+  font-family: "Cormorant Infant", serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 1.875rem;
+  line-height: 1.1;
+  font-style: italic;
+  color: #4a4a4a;
+}
+
+#quotes-section quote-citation {
+  height: 1.875rem;
+}
+
+@media only screen and (max-width: 890px) {
+  #quotes-section .content {
+    padding: 5rem 2rem;
+  }
+
+  #quotes-section .content .quote-citation {
+
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  #quotes-section .content {
+    padding: 1.875rem .625rem;
+  }
+
+  #quotes-section quote {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  #quotes-section quote-citation {
+    display: block;
+    padding-top: 1rem;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #quotes-section .content {
+    flex-direction: column;
+    padding: 3rem 5rem;
+  }
+
+  #quotes-section .quote {
+    font-size: 1.5rem;
+    line-height: 1.4;;
+  }
+}
+
+/* Footer */
+
+footer {
+  background-color: #9b9b9b;
+  padding: 1.625rem 2rem;
+}
+
+footer .content {
+  color: white;
+  display: flex;
+  font-size: .75rem;
+  font-family: "Roboto", sans-serif;
+}
+
+footer .copyright {
+  flex-grow: 1;
+}
+
+@media only screen and (min-width: 760px) {
+  footer .content {
+    font-size: .625rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  footer .content {
+    font-size: .625rem;
+  }
+}
